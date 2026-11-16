@@ -1,11 +1,17 @@
 Package: assignmentB2MinhuiLi
-Title: What the Package Does (One Line, Title Case)
+Title: Count Missing Values for All Columns by Group
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Minhui", "Li", , "minhuili@student.ubc.ca", role = c("aut", "cre"))
+Description: The `assignmentB2MinhuiLi` package provides a function, `count_all_missing_by_group()`, that counts missing values for all columns by group. Given a data frame `data` and a column `group`, `count_all_missing_by_group()` creates a new data frame with one row per level of `group`. The first column of the output data frame contains the levels of `group`, and the rest of the columns contain the number of missing values for all columns in `data` except `group`. This function is a wrapper around the `group_by()` and `summarize()` functions in the `dplyr` package.
+License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+Suggests: 
+    testthat (>= 3.0.0),
+    palmerpenguins,
+    tibble
+Config/testthat/edition: 3
+Imports: 
+    dplyr
