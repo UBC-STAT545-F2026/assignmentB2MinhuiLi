@@ -3,36 +3,34 @@
 
 # Package description: assignmentB2MinhuiLi
 
-The `assignmentB2MinhuiLi` package provides a function,
-`count_all_missing_by_group()`, that counts missing values for all
-columns by group. Given a data frame `data` and a column `group`,
-`count_all_missing_by_group()` creates a new data frame with one row per
-level of `group`. The first column of the output data frame contains the
-levels of `group`, and the rest of the columns contain the number of
-missing values for all columns in `data` except `group`. This function
-is a wrapper around the `group_by()` and `summarize()` functions in the
-`dplyr` package.
+The `assignmentB2MinhuiLi` package provides
+`count_all_missing_by_group()`, a function that counts missing values
+for all columns by group. Given a data frame `data` and a column
+`group`, `count_all_missing_by_group()` creates a new data frame with
+one row per level of `group`. The first column of the output data frame
+contains the levels of `group`, and the rest of the columns contain the
+number of missing values for all columns in `data` except `group`. This
+function is a wrapper around the `group_by()` and `summarize()`
+functions in the `dplyr` package.
 
 ## Installation
 
-Package installation can be done directly by calling
-`devtools::install_github("UBC-STAT545-F2026/assignmentB2MinhuiLi")`
-
-You can install the development version of assignmentB2MinhuiLi from
-[GitHub](https://github.com/) with:
+Package installation can be done directly by calling:
 
 ``` r
-# install.packages("pak")
-pak::pak("UBC-STAT545-F2026/assignmentB2MinhuiLi")
+devtools::install_github("UBC-STAT545-F2026/assignmentB2MinhuiLi")
+#> Warning: `install_github()` was deprecated in devtools 2.5.0.
+#> ℹ Please use pak::pak("user/repo") instead.
+#> This warning is displayed once per session.
+#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+#> generated.
+#> Using GitHub PAT from the git credential store.
+#> Skipping install of 'assignmentB2MinhuiLi' from a github remote, the SHA1 (48ba113d) has not changed since last install.
+#>   Use `force = TRUE` to force installation
+library(assignmentB2MinhuiLi)
 ```
 
 ## Example
-
-Load the package:
-
-``` r
-library(assignmentB2MinhuiLi)
-```
 
 This example computes the number of missing values in the `airquality`
 dataset grouped by the `Month` column.

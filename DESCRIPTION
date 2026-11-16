@@ -1,6 +1,6 @@
 Package: assignmentB2MinhuiLi
 Title: Count Missing Values for All Columns by Group
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Minhui", "Li", , "minhuili@student.ubc.ca", role = c("aut", "cre"))
 Description: The `assignmentB2MinhuiLi` package provides a function, `count_all_missing_by_group()`, that counts missing values for all columns by group. Given a data frame `data` and a column `group`, `count_all_missing_by_group()` creates a new data frame with one row per level of `group`. The first column of the output data frame contains the levels of `group`, and the rest of the columns contain the number of missing values for all columns in `data` except `group`. This function is a wrapper around the `group_by()` and `summarize()` functions in the `dplyr` package.
