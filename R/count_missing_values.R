@@ -34,6 +34,7 @@
 #' @export
 count_all_missing_by_group <- function(data, group_col, .groups = "drop") {
 
+  # Validate the .groups argument
   if(!is.null(.groups)) {
     if(!(.groups %in% c("drop_last", "drop",
                         "keep", "rowwise"))) {
@@ -42,8 +43,10 @@ count_all_missing_by_group <- function(data, group_col, .groups = "drop") {
          and \"rowwise\".")
     }
   }
-
+  # Group the data by the specified column
   data |> dplyr::group_by({{ group_col }}) |>
+
+  # Count missing values in each non-grouping column
     dplyr::summarize(dplyr::across(dplyr::everything(), ~sum(is.na(.x))),
               .groups = .groups)
 }

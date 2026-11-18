@@ -26,7 +26,7 @@ devtools::install_github("UBC-STAT545-F2026/assignmentB2MinhuiLi")
 library(assignmentB2MinhuiLi)
 ```
 
-## Example
+## Usage/Example
 
 This example computes the number of missing values in the `airquality` dataset grouped by the `Month` column. 
 

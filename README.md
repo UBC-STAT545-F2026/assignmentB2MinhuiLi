@@ -25,12 +25,26 @@ devtools::install_github("UBC-STAT545-F2026/assignmentB2MinhuiLi")
 #> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
 #> generated.
 #> Using GitHub PAT from the git credential store.
-#> Skipping install of 'assignmentB2MinhuiLi' from a github remote, the SHA1 (48ba113d) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo UBC-STAT545-F2026/assignmentB2MinhuiLi@HEAD
+#> 
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#>       ✔  checking for file 'C:\Users\11637\AppData\Local\Temp\RtmpioYRP5\remotes4f4c1b254246\UBC-STAT545-F2026-assignmentB2MinhuiLi-bb65753/DESCRIPTION'
+#>       ─  preparing 'assignmentB2MinhuiLi':
+#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+#>       ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>      NB: this package now depends on R (>=        NB: this package now depends on R (>= 4.1.0)
+#>      WARNING: Added dependency on R >= 4.1.0 because package code uses the
+#>      pipe |> or function shorthand \(...) syntax added in R 4.1.0.
+#>      File(s) using such syntax:
+#>        'count_all_missing_by_group.Rd' 'count_missing_values.R'
+#>   ─  building 'assignmentB2MinhuiLi_0.1.0.tar.gz'
+#>      
+#> 
 library(assignmentB2MinhuiLi)
 ```
 
-## Example
+## Usage/Example
 
 This example computes the number of missing values in the `airquality`
 dataset grouped by the `Month` column.
